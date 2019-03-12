@@ -9,8 +9,7 @@ screen = pygame.display.set_mode((700, 580))
 xpos = 50
 
 while 1 :
-    # 이벤트가 발생하면(pygame.event.get()) 버튼을 눌렀는지(QUIT)
-    # 해당 루프안에 이벤트들이 다 종료되면 종료?
+    # 이벤트가 발생하면(pygame.event.get()) X 버튼을 눌렀는지(QUIT)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             # 종료한다
