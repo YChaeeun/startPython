@@ -1,7 +1,7 @@
 # MergeSort
 # 재귀함수를 이용하여 그룹을 나누고, 이후 병합하는 알고리즘
 
-
+# O(N^logN)
 def mergeSort(listofNum) :
     
     if len(listofNum) <= 1:
