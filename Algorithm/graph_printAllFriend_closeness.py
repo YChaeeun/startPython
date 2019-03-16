@@ -1,22 +1,24 @@
 
-# Graph
-
-def printAllFriends(f_info, start) :
+def printAll_close(f_info, start):
 
     qu = list()
     done = set()
 
-    qu.append(start)
+    qu.append((start,0))   # 친밀도 기록, 튜플로 저장
     done.add(start)
 
     while qu :
-        friendtoprint = qu.pop(0)
-        print(friendtoprint)
+        friendtoprint, close = qu.pop(0)
+        print(friendtoprint, close)
 
         for friend in f_info[friendtoprint] :
             if friend not in done :
-                qu.append(friend)
+                qu.append((friend, close+1))
                 done.add(friend)
+
+
+    return
+
 
 
 friend_info = {
@@ -28,7 +30,6 @@ friend_info = {
         'Michelle' : ['Jessy'],
         'Erica' : ['Noah'],
         'Noah' : ['Erica']
-    }
+}
 
-
-printAllFriends(friend_info, 'Summer')
+printAll_close(friend_info, 'Summer')
