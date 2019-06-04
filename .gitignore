@@ -1,4 +1,6 @@
 TODO.txt
 *.ipynb_checkpoints
 *.png
+Problems/
+_pycache_/
 /_pycache_/
